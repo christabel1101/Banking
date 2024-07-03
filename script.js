@@ -11,6 +11,8 @@ form.addEventListener('submit', function(event) {
     if (username === "admin" && password === "password") {
         // Successful login
         alert("Login successful!");
+        // Set session storage flag
+        sessionStorage.setItem('loggedIn', 'true');
         // Redirect to the bank portfolio page
         window.location.href = "login.html";
     } else {
@@ -19,3 +21,8 @@ form.addEventListener('submit', function(event) {
     }
 });
 
+// Check session on page load
+window.onload = function() {
+    // Clear session storage if user navigates back to login page
+    sessionStorage.removeItem('loggedIn');
+};
