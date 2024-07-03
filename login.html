@@ -195,6 +195,19 @@
         // Load the first page by default
         document.addEventListener('DOMContentLoaded', () => loadPage(1));
     </script>
+            <script>
+            // Check if the user is logged in
+            if (sessionStorage.getItem('loggedIn') !== 'true') {
+                // If not logged in, redirect to login page
+                window.location.href = "index.html";
+            }
+
+            // Logout button functionality
+            document.getElementById('logout').addEventListener('click', function () {
+                sessionStorage.removeItem('loggedIn');
+                window.location.href = "index.html";
+            });
+        </script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="login.js"></script>
