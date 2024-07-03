@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Republic Bank</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="web12.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div fxlayout="row" fxlayoutalign="center center" class="login-content__logo"
+            style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center; align-items: center;">
+            <div class="banklogo3d">
+                <img src="web12.png" alt="Bank Logo">
+            </div>
+        </div>
+        <div class="login-box">
+            <h2>Sign in to Online Banking</h2>
+            <form id="login-form" method="post">
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit">Login</button>
+                <a class="login-content__form--link" href="Forgot.html"> Have you forgotten your password? </a>
+            </form>
+            <div class="cred" id="errorMessage" style="display: none; color: red;">Wrong credentials. Please try again.</div>
+
+            <script src="script.js"></script>
+        </div>
+                    <div class="login-content__footer">
+                        <div class="login-content__footer--tnc"> By signing in I acknowledge that I have
+                            read and understood the <span class="login-content__footer--link">terms and
+                                conditions</span> when using Online Banking </div>
+                        <div class="login-content__footer--email"><span class="login-content__footer--link">Need help?</span>&nbsp;Call us
+                            on :
+                            +233 508 69 6246 or <a class="login-content__footer--link remove-link-underline"
+                                href="mailto:owusutheophilus250@gmail.com">Email us</a></div>
+                        <div class="login-content__footer--disclaimer">
+                            <a class="login-content__footer--link" href="mailto:owusutheophilus250@gmail.com"> Privacy and Security </a>
+                            <a class="login-content__footer--link ml-16"
+                            href="mailto:owusutheophilus250@gmail.com">&nbsp;Disclaimer </a>
+                        </div>
+                    </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

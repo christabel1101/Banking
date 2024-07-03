@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Dashboard</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="web12.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3badbb0292.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        <header>
+            <div class="container1">
+                <nav class="nav1">
+                    <span class="hamburger-menu" onclick="toggleSidebar()">☰</span>
+                    <a href="login.html" class="logo-link">
+                        <div class="logo-container">
+                            <img src="web.png" alt="Company Logo" class="company-logo">
+                            <span class="company-name">Code Republic Bank</span>
+                        </div>
+                    </a>
+                    <span class="name">Hello Michael</span>
+                </nav>
+            </div>
+        </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <!-- <img src="web12.png" alt="" class="logo">  -->
+            <!-- <div class="logo">Code Republic Bank</div> -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="login.html" aria-label="Dashboard">Dashboard</a></li>
+                    <li><a href="statement.html" aria-label="Statements">Statements</a></li>
+                    <li><a href="trans.html" aria-label="Transactions">Transactions</a></li>
+                    <li><a href="settings.html" aria-label="Settings">Settings</a></li>
+                    <!-- <li><a href="#">Open Account</a></li> -->
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#">Feedback</a>
+                <a href="Gameli.html">Sign Out</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <!-- <div class="header">
+                <div>Dashboard</div>
+            </div> -->
+            <!-- <br>
+            <br> -->
+            <div class="header" style="margin-top: 40px;">
+                <div>Dashboard</div>
+            </div>
+
+            <section class="dashboard">
+                <div class="account-summary">
+                    <div class="one">
+                    <h3>Account Summary</h3>
+                    <p>Account Balance</p>
+                    <div class="balance">
+                    <p>$ 600,030.02 </p>
+                    </div>
+                    </div>
+                    <div class="details">
+                       <p>Type: Current</p>
+                       <p>Status: Active</p>
+                    </div>
+                </div>
+
+                <div class="right-content">
+                    <div class="filter">
+                        <input type="date" id="start-date">
+                        <input type="date" id="end-date">
+                        <button onclick="filterData()">Filter</button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="transactionChart"></canvas>
+                    </div>
+                </div>
+            </section>
+            <section class="transactions">
+                <h3>Transactions</h3>
+                <table id="transaction-table" aria-labelledby="transaction-heading">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Transaction Details</th>
+                            <th>Transaction Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>03/16/24</td>
+                            <td>POS Purchase</td>
+                            <td>$ 50.00</td>
+                        </tr>
+                        <tr>
+                            <td>04/28/24</td>
+                            <td>ATM Withdrawal</td>
+                            <td>$ 150.00</td>
+                        </tr>
+                        <tr>
+                            <td>05/05/24</td>
+                            <td>Transfer</td>
+                            <td>$ 150.00</td>
+                        </tr>
+                        <tr>
+                            <td>05/28/24</td>
+                            <td>POS Purchase</td>
+                            <td>$ 150.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                        <a href="javascript:void(0);" onclick="loadPage(1)">1</a>
+                        <a href="javascript:void(0);" onclick="loadPage(2)">2</a>
+                        <a href="javascript:void(0);" onclick="loadPage(3)">3</a>
+                        <a href="javascript:void(0);" onclick="loadPage(4)">4</a>
+                </div>
+            </section>
+            <section class="cards">
+                <h3>Visa Card</h3>
+                <div class="card">
+                    <div class="card-name">CODE BANK</div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="card-number">4012 0000 0000 0000</div>
+                    <br>
+                    <br>
+                    <div class="card-holder">Peterson Reynolds</div>
+                    <div class="card-expiry">04/32</div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('hidden');
+        }
+    </script>    
+    <script>
+        // Example transaction data
+        const transactions = [
+            [
+                { date: "03/16/24", details: "POS Purchase", amount: "$50.00" },
+                { date: "04/28/24", details: "ATM Withdrawal", amount: "$150.00" },
+                { date: "05/05/24", details: "Transfer", amount: "$150.00" },
+                { date: "05/28/24", details: "POS Purchase", amount: "$150.00" }
+            ],
+            [
+                { date: "06/01/24", details: "POS Purchase", amount: "$75.00" },
+                { date: "07/12/24", details: "ATM Withdrawal", amount: "$200.00" },
+                { date: "08/20/24", details: "Transfer", amount: "$100.00" },
+                { date: "09/15/24", details: "POS Purchase", amount: "$150.00" }
+            ],
+            [
+                { date: "10/05/24", details: "POS Purchase", amount: "$120.00" },
+                { date: "11/10/24", details: "ATM Withdrawal", amount: "$250.00" },
+                { date: "12/25/24", details: "Transfer", amount: "$300.00" },
+                { date: "01/01/25", details: "POS Purchase", amount: "$200.00" }
+            ],
+            [
+                { date: "02/14/25", details: "POS Purchase", amount: "$50.00" },
+                { date: "03/21/25", details: "ATM Withdrawal", amount: "$100.00" },
+                { date: "04/12/25", details: "Transfer", amount: "$150.00" },
+                { date: "05/18/25", details: "POS Purchase", amount: "$200.00" }
+            ]
+        ];
+
+        // Function to load a specific page of data
+        function loadPage(pageNumber) {
+            // Clear the existing table rows
+            const tbody = document.querySelector('#transaction-table tbody');
+            tbody.innerHTML = '';
+
+            // Get the transactions for the selected page
+            const pageData = transactions[pageNumber - 1];
+
+            // Populate the table with the new data
+            pageData.forEach(transaction => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${transaction.date}</td>
+                    <td>${transaction.details}</td>
+                    <td>${transaction.amount}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Load the first page by default
+        document.addEventListener('DOMContentLoaded', () => loadPage(1));
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="login.js"></script>
+</body>
+
+</html>

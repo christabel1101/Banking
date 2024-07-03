@@ -1,0 +1,552 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container1 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #fff;
+    color: #000;
+    padding: 14px 0;
+    position: fixed;
+    top: 0;
+    width: 99%;
+    border-bottom: 1px solid #ddd;
+    height: 35px;
+    z-index: 1000;
+}
+
+
+/* .nav1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+} */
+
+.nav1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    margin-right: 20px;
+} */
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.company-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+/* .container {
+    display: flex;
+    height: 100vh;
+} */
+
+.container {
+    display: flex;
+    height: calc(100vh - 0px);
+    /* Subtract header height from 100vh */
+    /* margin-top: 35px; */
+    /* height: 10%; */
+    /* Add top margin equal to the height of the header */
+}
+
+.name {
+    color: black;
+    margin-left: auto;
+}
+
+.sidebar {
+    width: 150px;
+    background-color: #003366;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    transform: translate(0);
+    z-index: 999;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+    /* Hidden off-screen */
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 115px;
+    margin-bottom: 200px;
+}
+
+.nav ul li {
+    margin: 10px 0;
+    margin-top: 30px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar-footer a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+}
+
+.header {
+    /* background-color: #fff; */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 25px;
+    margin-left: auto;
+}
+
+.one{
+    background-color: #00509e;
+        /* padding: 1px; */
+            padding-left: 12px;
+            padding-top: 0.5px;
+            padding-bottom: 0.5px;
+            border-radius: 3px;
+                width: 250px;
+                    margin-bottom: auto;
+
+}
+
+/* .dashboard {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    background-color: #fff;
+} */
+
+/* .dashboard {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+} */
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between;
+    align-items: flex-start; */
+    /* Align items to the top */
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* .account-summary {
+    background-color: #00509e;
+    margin-top: 30px;
+    color: #fff;
+    padding: 1px;
+    padding-left: 12px;
+    border-radius: 3px;
+    width: 400px;
+    margin-bottom: auto;
+} */
+
+.account-summary {
+    /* background-color: #00509e; */
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+         /* Set width as needed */
+    box-sizing: border-box;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    /* Stack filter on top of chart */
+    width: 80%;
+    /* Set width as needed */
+}
+
+/* .details {
+    background-color: #00509e;
+    color: #fff;
+    padding: 5px;
+    padding-left: 12px;
+    border-radius: 8px;
+    width: 400px;
+    margin-bottom: auto;
+    margin-top: 250px;
+    margin-right: auto;
+} */
+
+.balance {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.details{
+        background-color: #00509e;
+            /* padding: 1px; */
+            padding-left: 12px;
+            padding-top: 0.5px;
+            padding-bottom: 0.5px;
+            border-radius: 3px;
+            width: 250px;
+            margin-bottom: auto;
+            margin-top: 10px;
+}
+
+/* .filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 5px;
+    width: 250px;
+    margin-right: 100px;
+} */
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+    overflow-x: auto;
+    /* margin-right: 100px; */
+}
+
+
+.transactions,
+.cards {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.transactions table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.transactions table,
+.transactions th,
+.transactions td {
+    border: 1px solid #ddd;
+}
+
+.transactions th,
+.transactions td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* .pagination a {
+    margin-right: 5px;
+    text-decoration: none;
+    color: #003366;
+} */
+
+.pagination {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.pagination a {
+    color: #003366;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.pagination a:hover {
+    background-color: #f4f4f4;
+}
+
+.cards .card {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 170px;
+}
+
+.card-number {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-holder,
+.card-expiry {
+    font-size: 14px;
+}
+
+.filter button {
+    background-color: #00509e;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.filter button:hover {
+    background-color: #003366;
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 20%;
+        position: relative;
+    }
+
+    .main-content {
+        margin-top: 20px;
+    }
+    
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .sidebar {
+            width: 100%;
+            transform: translateX(-100%);
+            /* Hidden initially on small screens */
+            position: absolute;
+            height: calc(100vh - 50px);
+            /* Adjust for header */
+        }
+    
+    .hamburger-menu {
+        display: block;
+        margin-right: 50px;
+        /* Show hamburger menu on small screens */
+    }
+
+    .main-content {
+        margin-top: 10px;
+    }
+
+    .nav ul {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .dashboard {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .account-summary,
+    .right-content,
+    .details,
+    .cards .card {
+        width: 100%;
+    }
+
+    .transactions table,
+    .chart-container {
+        overflow-x: scroll;
+        /* Horizontal scroll for tables and charts */
+    }
+
+    .filter {
+        flex-direction: column;
+        /* Stack filter options */
+    }
+
+    .container {
+        flex-direction: column;
+        /* Stack the layout on small screens */
+        padding-top: 60px;
+        /* Ensure space for header */
+    }
+    
+    .company-name {
+        font-size: 13px;
+    }
+
+    .name {
+        font-size: 13px;
+    }
+
+    .details {
+        width: 5%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .sidebar {
+            width: 100%;
+            position: fixed;
+            height: 100vh;
+            top: 0;
+            transform: translateX(-100%);
+        }
+
+        
+    .sidebar {
+        width: 200px;
+        /* Sidebar width for tablets */
+        transform: translateX(-100%);
+        /* Hide initially */
+    }
+
+    .main-content {
+        margin-left: 0;
+        /* No margin when sidebar is hidden */
+    }
+
+    .dashboard {
+        flex-direction: column;
+        width: 88%;
+    }
+
+    .account-summary,
+    .right-content,
+    .details,
+    .cards .card {
+        width: 90%;
+    }
+
+    .transactions table,
+    .chart-container {
+        overflow-x: scroll;
+        height: 150px;
+    }
+
+    .filter {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+        padding-top: 60px;
+    }
+
+    .details {
+        width: 104%;
+    }
+
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    /* .main-content {
+        margin-left: 150px;
+    } */
+
+    .dashboard {
+        flex-direction: row;
+    }
+
+    /* .account-summary,
+    .right-content {
+        width: 40%;
+    } */
+    .filter {
+        flex-direction: row;
+    }
+
+    
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    /* .main-content {
+        margin-left: 200px;
+    } */
+
+    .dashboard {
+        flex-direction: row;
+    }
+
+    /* .account-summary,
+    .right-content {
+        width: 40%;
+    } */
+
+        .filter {
+            flex-direction: row;
+        }
+}

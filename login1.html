@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Bank Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav1">
+            <a href="#" class="logo-link">
+                <div class="logo-container">
+                    <img src="logo.png" alt="Company Logo" class="company-logo">
+                    <span class="company-name">BankName</span>
+                </div>
+            </a>
+            <span class="hamburger-menu" onclick="toggleSidebar()">☰</span>
+            <span class="name">User Name</span>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar hidden" id="sidebar">
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Transactions</a></li>
+                    <li><a href="#">Cards</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-footer">
+                <a href="#">Logout</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="dashboard">
+                <div class="account-summary">
+                    <h2>Account Summary</h2>
+                    <div class="balance">$12,345.67</div>
+                    <div class="details">Account Details</div>
+                </div>
+                <div class="right-content">
+                    <div class="filter">
+                        <input type="text" placeholder="Search">
+                        <button>Filter</button>
+                    </div>
+                    <div class="chart-container">
+                        <!-- Chart content here -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="transactions">
+                <h2>Recent Transactions</h2>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Balance</th>
+                    </tr>
+                    <tr>
+                        <td>01/01/2024</td>
+                        <td>Deposit</td>
+                        <td>$1,000.00</td>
+                        <td>$12,345.67</td>
+                    </tr>
+                    <!-- More rows here -->
+                </table>
+                <div class="pagination">
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                </div>
+            </section>
+
+            <section class="cards">
+                <h2>My Cards</h2>
+                <div class="card">
+                    <div class="card-number">**** **** **** 1234</div>
+                    <div class="card-holder">John Doe</div>
+                    <div class="card-expiry">Expires 12/24</div>
+                </div>
+                <!-- More cards here -->
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>

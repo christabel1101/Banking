@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Statement</title>
+    <link rel="stylesheet" href="statement.css">
+    <link rel="shortcut icon" href="web12.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="login.html" class="logo-link">
+                    <div class="logo-container">
+                        <img src="web.png" alt="Company Logo" class="company-logo">
+                        <span class="company-name">Code Republic Bank</span>
+                    </div>
+                </a>
+                <span class="name">Hello Michael</span>
+            </nav>
+        </div>
+    </header>
+
+    <div class="statement-container">
+        <div class="account-details">
+            <h2>Account Details</h2>
+            <div class="details">
+                <p><strong>Account Number:</strong> 123456789</p>
+                <p><strong>Account Holder:</strong> Michael Johnson</p>
+                <p><strong>Account Type:</strong> Checking</p>
+                <p><strong>Balance:</strong> $5,000.00</p>
+            </div>
+        </div>
+
+        <div class="transaction-filter">
+            <h2>Transaction History</h2>
+            <form id="filter-form">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date">
+
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" name="end-date">
+
+                <label for="transaction-type">Transaction Type:</label>
+                <select id="transaction-type" name="transaction-type">
+                    <option value="all">All</option>
+                    <option value="deposit">Deposit</option>
+                    <option value="withdrawal">Withdrawal</option>
+                    <option value="transfer">Transfer</option>
+                </select>
+
+                <button type="button" onclick="filterTransactions()">Filter</button>
+            </form>
+        </div>
+
+        <div class="transaction-history">
+            <table id="transaction-history-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Transaction history rows will be inserted here dynamically -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="actions">
+            <button onclick="downloadStatement()">Download Statement</button>
+        </div>
+    </div>
+
+    <script src="statement.js"></script>
+</body>
+
+</html>

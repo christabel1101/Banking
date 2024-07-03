@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(row2.png);
+    background-size: cover;
+}
+
+.container1 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #fff;
+    color: #000;
+    padding: 14px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    height: 35px;
+}
+
+.nav1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.company-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+}
+
+.name {
+    color: black;
+    margin-left: auto;
+}
+
+.header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 25px;
+    margin-left: auto;
+    color: #fff;
+}
+
+.transaction-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.transaction-form {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.transaction-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.transaction-form input,
+.transaction-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.transaction-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.transaction-history {
+    margin-top: 20px;
+}
+
+.transaction-history h2 {
+    color: #fff;
+}
+
+.transaction-history tr {
+    color: #fff;
+}
+
+.transaction-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-history th,
+.transaction-history td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.transaction-history th {
+    background-color: #f2f2f2;
+}

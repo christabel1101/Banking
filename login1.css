@@ -1,0 +1,142 @@
+
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        transform: translateX(-100%);
+        /* Hidden initially on small screens */
+        position: absolute;
+        height: calc(100vh - 50px);
+        /* Adjust for header */
+    }
+
+    .hamburger-menu {
+        display: block;
+        /* Show hamburger menu on small screens */
+    }
+
+    .main-content {
+        margin-left: 0;
+        /* Remove margin when sidebar is hidden */
+    }
+
+    .dashboard {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .account-summary,
+    .right-content,
+    .details,
+    .cards .card {
+        width: 100%;
+    }
+
+    .transactions table,
+    .chart-container {
+        overflow-x: scroll;
+        /* Horizontal scroll for tables and charts */
+    }
+
+    .filter {
+        flex-direction: column;
+        /* Stack filter options */
+    }
+
+    .container {
+        flex-direction: column;
+        /* Stack the layout on small screens */
+        padding-top: 60px;
+        /* Ensure space for header */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        /* Sidebar width for tablets */
+        transform: translateX(-100%);
+        /* Hide initially */
+    }
+
+    .main-content {
+        margin-left: 0;
+        /* No margin when sidebar is hidden */
+    }
+
+    .dashboard {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .account-summary,
+    .right-content,
+    .details,
+    .cards .card {
+        width: 100%;
+    }
+
+    .transactions table,
+    .chart-container {
+        overflow-x: scroll;
+    }
+
+    .filter {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+        padding-top: 60px;
+    }
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .main-content {
+        margin-left: 150px;
+    }
+
+    .dashboard {
+        flex-direction: row;
+    }
+
+    .account-summary,
+    .right-content,
+    .details,
+    .cards .card {
+        width: 48%;
+    }
+
+    .filter {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+
+    .dashboard {
+        flex-direction: row;
+    }
+
+    .account-summary,
+    .right-content,
+    .details,
+    .cards .card {
+        width: 45%;
+    }
+
+    .filter {
+        flex-direction: row;
+    }
+}

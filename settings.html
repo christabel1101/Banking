@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="settings.css">
+    <link rel="shortcut icon" href="web12.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="container1">
+            <nav class="nav1">
+                <a href="login.html" class="logo-link">
+                    <div class="logo-container">
+                        <img src="web.png" alt="Company Logo" class="company-logo">
+                        <span class="company-name">Code Republic Bank</span>
+                    </div>
+                </a>
+                <span class="name">Hello Michael</span>
+            </nav>
+        </div>
+    </header>
+
+    <div class="settings-container">
+        <div class="header">
+            <div>Settings</div>
+        </div>
+
+        <!-- Profile Information -->
+        <div class="settings-section">
+            <h2>Profile Information</h2>
+            <form id="profile-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" value="Michael">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="michael@example.com">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" value="+1234567890">
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+
+        <!-- Change Password -->
+        <div class="settings-section">
+            <h2>Change Password</h2>
+            <form id="password-form">
+                <label for="current-password">Current Password</label>
+                <input type="password" id="current-password" name="current-password">
+
+                <label for="new-password">New Password</label>
+                <input type="password" id="new-password" name="new-password">
+
+                <label for="confirm-password">Confirm New Password</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+
+                <button type="submit">Change Password</button>
+            </form>
+        </div>
+
+        <!-- Notification Preferences -->
+        <div class="settings-section">
+            <h2>Notification Preferences</h2>
+            <form id="notifications-form">
+                <label>
+                    <input type="checkbox" id="email-notifications" name="email-notifications" checked>
+                    Email Notifications
+                </label>
+
+                <label>
+                    <input type="checkbox" id="sms-notifications" name="sms-notifications">
+                    SMS Notifications
+                </label>
+
+                <button type="submit">Save Preferences</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+
+</html>
